@@ -47,8 +47,6 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-
-    /* outline: 1px solid tomato; */
 }
 
 .header {
@@ -92,6 +90,10 @@ body {
     background-color: var(--change-color);
     opacity: 0;
 
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .header-nav-link.current::after,
@@ -132,6 +134,10 @@ body {
 .link:hover,
 .link:focus {
     color: var(--change-color);
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -144,6 +150,7 @@ body {
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: var(--main-color);
+
 }
 
 .header-nav-contact{
@@ -166,6 +173,10 @@ body {
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: var(--second-color);
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero */
@@ -459,12 +470,20 @@ body {
         width: 44px;
         height: 44px;
         border-radius: 50%;
+
+        transition-property: var(--change-color);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
 .social-link:focus {
     background-color: var(--change-color);
     border: none;
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
@@ -534,6 +553,7 @@ body {
     display: inline-flex;
     width: 170px;
     height: 92px;
+    
 }
 
 .clients-link {
@@ -544,6 +564,10 @@ body {
     color: var(--client);
     border: 1px solid var(--client);
     border-radius: 4px; 
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -554,6 +578,10 @@ body {
 .clients-link:focus {
     border-color: var(--change-color);
     color: #2196F3;
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Фильтр работ */
@@ -587,12 +615,21 @@ body {
     color: var(--main-color);
     background-color: var(--corol-button);
     border: 0;
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .botton-type:hover,
 .botton-type:focus {
     color: var(--White-color);
-    background: var(--change-color)
+    background: var(--change-color);
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 /* Портфолио */
@@ -766,12 +803,20 @@ body {
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
 .header-link:focus {
     background-color: var(--change-color);
     border: none;
+
+    transition-property: var(--change-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover .social-icon,
