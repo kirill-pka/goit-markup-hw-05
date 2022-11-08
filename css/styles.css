@@ -8,6 +8,8 @@
     --corol-button: #F5F4FA;
     --background-buttom: #188CE8;
     --client: #AFB1B8;
+
+    --trns-amim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -71,10 +73,6 @@ body {
   
 }
 
-.current {
-    color: var(--change-color);
-}
-
 .header-nav-link::after {
     content: '';
     position: absolute;
@@ -87,19 +85,22 @@ body {
     width: 100%;
     height: 4px;
     border-radius: 2px;
+    
     background-color: var(--change-color);
     opacity: 0;
 
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: opacity var(--trns-amim);
+    
 }
 
 .header-nav-link.current::after,
 .header-nav-link:hover::after,
 .header-nav-link:focus::after {
     opacity: 1;
+}
+
+.header-nav-link.current {
+    color: var(--change-color);
 }
 
 .logo {
@@ -131,13 +132,13 @@ body {
     fill: currentColor;
 }
 
+.link {
+    transition: color var(--trns-amim);
+}
+
 .link:hover,
 .link:focus {
     color: var(--change-color);
-
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -173,10 +174,6 @@ body {
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: var(--second-color);
-
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero */
@@ -236,12 +233,15 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
+
+    transition: color var(--trns-amim),
+                background-color var(--trns-amim);
 }
 
 .button-hero:hover,
 .button-hero:focus {
     color: var(--White-color);
-    background: var(--background-buttom);
+    background-color: var(--background-buttom);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -471,29 +471,24 @@ body {
         height: 44px;
         border-radius: 50%;
 
-        transition-property: var(--change-color);
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       transition: background-color var(--trns-amim);
 }
 
 .social-link:hover,
 .social-link:focus {
     background-color: var(--change-color);
-    border: none;
+}
 
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.social-icon {
+    fill: var(--client);
+
+    transition: fill var(--trns-amim);
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
     fill: var(--White-color);
 } 
-
-.social-icon {
-    fill: var(--client);
-}
 
 .about-team {
     padding-bottom: 10px;
@@ -556,6 +551,10 @@ body {
     
 }
 
+.clients-icon {
+    fill: currentColor;
+}
+
 .clients-link {
     display: flex;
     justify-content: center;
@@ -565,23 +564,14 @@ body {
     border: 1px solid var(--client);
     border-radius: 4px; 
 
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-icon {
-    fill: currentColor;
+    transition: border-color var(--trns-amim),
+                color var(--trns-amim);
 }
 
 .clients-link:hover,
 .clients-link:focus {
     border-color: var(--change-color);
     color: #2196F3;
-
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Фильтр работ */
@@ -614,21 +604,17 @@ body {
     letter-spacing: 0.03em;
     color: var(--main-color);
     background-color: var(--corol-button);
-    border: 0;
+    border: none;
+    border-radius: 4px;
 
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--trns-amim),
+                background-color var(--trns-amim);
 }
 
 .botton-type:hover,
 .botton-type:focus {
     color: var(--White-color);
-    background: var(--change-color);
-
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--change-color);
  
 }
 
@@ -697,7 +683,7 @@ body {
 
     background: rgba(33, 150, 243, 0.9);
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--trns-amim);
 }
 
 .item:hover .overlay,
@@ -804,19 +790,13 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
 
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color var(--trns-amim);
 }
 
 .header-link:hover,
 .header-link:focus {
     background-color: var(--change-color);
     border: none;
-
-    transition-property: var(--change-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover .social-icon,
